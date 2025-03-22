@@ -2,13 +2,13 @@ import Providers from '@/app/providers';
 import "@/app/globals.css";
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body>
+    return (
+        <html lang="en">
+        <body>
         <Providers>
-          {children}
+            {children}
         </Providers>
-      </body>
-    </html>
-  );
+        </body>
+        </html>
+    );
 }
