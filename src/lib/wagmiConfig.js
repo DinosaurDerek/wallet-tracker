@@ -6,8 +6,8 @@ const wagmiConfig = createConfig({
     chains: [mainnet, base, bsc, polygon, sepolia],
     transports: {
         [mainnet.id]: http(),
-        [base.id]: http(),
-        [bsc.id]: http(),
+        [base.id]: http('https://mainnet.base.org'),
+        [bsc.id]: http('https://bsc-dataseed.binance.org/'),
         [polygon.id]: http(),
         [sepolia.id]: http(),
     },
