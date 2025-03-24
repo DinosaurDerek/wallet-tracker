@@ -1,9 +1,9 @@
 "use client";
 
-import { useBalance } from 'wagmi';
+import { useAccount, useBalance } from 'wagmi';
 
-
-export default function TokenBalance({ address, chainId, tokenAddress, name }) {
+export default function TokenBalance({ chainId, tokenAddress, name }) {
+    const { address } = useAccount();
     const { data, error, isError, isLoading } = useBalance({
         address: address,
         chainId,
