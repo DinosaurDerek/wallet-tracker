@@ -7,7 +7,7 @@ and token sending across multiple chains using **RainbowKit, Wagmi, and Viem**.
 
 ✅ Connect and disconnect wallets using RainbowKit  
 ✅ Display wallet balances for supported networks  
-✅ Network switching (Ethereum, Base, BSC, Sepolia)  
+✅ Switch networks (Ethereum, Base, BSC, Sepolia)  
 ✅ Send tokens on supported networks
 
 ## Tech Stack

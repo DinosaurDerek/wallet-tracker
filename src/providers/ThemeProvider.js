@@ -1,7 +1,6 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
-import { darkTheme, lightTheme } from "@rainbow-me/rainbowkit";
 
 const ThemeContext = createContext();
 
@@ -37,8 +36,4 @@ export function ThemeProvider({ children }) {
 
 export function useTheme() {
     return useContext(ThemeContext);
-}
-
-export function getRainbowKitTheme(theme) {
-    return theme === "dark" ? darkTheme() : lightTheme();
 }
