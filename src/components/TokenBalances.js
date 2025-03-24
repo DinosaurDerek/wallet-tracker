@@ -10,7 +10,7 @@ export default function TokenBalances({ chainId, walletAddress }) {
                     address={walletAddress}
                     chainId={chainId}
                     tokenAddress={token.address}
-                    name={token.name}
+                    name={token.symbol}
                 />
             ))}
         </div>
