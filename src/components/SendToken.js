@@ -64,41 +64,43 @@ function SendTransactionForm() {
     };
 
     return (
-        <form className="flex flex-wrap gap-2 justify-center" onSubmit={handleSubmit}>
-            <span className={inputStyles}>
-                <select
-                    value={selectedToken.address}
-                    onChange={(e) => setSelectedToken(tokens.find((t) => t.address === e.target.value) || tokens[0])}
-                >
-                    {tokens.map((token) => (
-                        <option key={token.address || token.symbol} value={token.address}>
-                            {token.symbol}
-                        </option>
-                    ))}
-                </select>
-            </span>
-            <span className={inputStyles}>
-                <input
-                    type="text"
-                    value={recipient}
-                    className="placeholder-zinc-400"
-                    onChange={(e) => setRecipient(e.target.value)}
-                    placeholder="Recipient address"
-                    required
-                />
-            </span>
-            <span className={inputStyles}>
-                <input
-                    type="number"
-                    step="0.000001"
-                    value={amount}
-                    className="placeholder-zinc-400"
-                    onChange={(e) => setAmount(e.target.value)}
-                    placeholder={`Amount (${selectedToken.symbol})`}
-                    required
-                />
-            </span>
-            <button className={inputStyles} type="submit">Send</button>
+        <form className="flex flex-col gap-2 text-center" onSubmit={handleSubmit}>
+            <div className="flex flex-wrap gap-2 justify-center">
+                <span className={inputStyles}>
+                    <select
+                        value={selectedToken.address}
+                        onChange={(e) => setSelectedToken(tokens.find((t) => t.address === e.target.value) || tokens[0])}
+                    >
+                        {tokens.map((token) => (
+                            <option key={token.address || token.symbol} value={token.address}>
+                                {token.symbol}
+                            </option>
+                        ))}
+                    </select>
+                </span>
+                <span className={inputStyles}>
+                    <input
+                        type="text"
+                        value={recipient}
+                        className="placeholder-zinc-400"
+                        onChange={(e) => setRecipient(e.target.value)}
+                        placeholder="Recipient address"
+                        required
+                    />
+                </span>
+                <span className={inputStyles}>
+                    <input
+                        type="number"
+                        step="0.000001"
+                        value={amount}
+                        className="placeholder-zinc-400"
+                        onChange={(e) => setAmount(e.target.value)}
+                        placeholder={`Amount (${selectedToken.symbol})`}
+                        required
+                    />
+                </span>
+                <button className="p-2 rounded-xl bg-blue-500" type="submit">Send</button>
+            </div>
             {error && <div className="text-red-600">{error}</div>}
             {isSuccessful && <div className="text-green-600">Sent successfully!</div>}
         </form>
