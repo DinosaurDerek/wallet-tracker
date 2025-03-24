@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Web3 Wallet Demo
+
+This is a simple Next.js-based Web3 wallet demo showcasing wallet connection, network switching, token balance display,
+and token sending across multiple chains using **RainbowKit, Wagmi, and Viem**.
+
+## Features
+
+✅ Connect and disconnect wallets using RainbowKit  
+✅ Display wallet balances for supported networks  
+✅ Network switching (Ethereum, Base, BSC, Sepolia)  
+✅ Send tokens on supported networks
+
+## Tech Stack
+
+- **Next.js** – React framework for optimized frontend development (SSR disabled for compatibility)
+- **Tailwind CSS** – Utility-first CSS framework for styling
+- **RainbowKit** – Elegant UI for wallet connections
+- **Wagmi & Viem** – Web3 libraries for interacting with Ethereum and EVM-compatible chains
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Ensure you have **Node.js 18+** and **Yarn** installed.
+
+### Installation
+
+```sh
+git clone <repo-url>
+cd <project-folder>
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Running Locally
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```sh
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Deployment
 
-## Learn More
+The project is deployed on Vercel at:
 
-To learn more about Next.js, take a look at the following resources:
+🔗 [Vercel URL](https://wallet-tracker-cle79tyfp-dereks-projects-1fc98dac.vercel.app)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Future Improvements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🔹 Custom styling for RainbowKit UI  
+🔹 Support for more networks (e.g., Solana)  
+🔹 Fetch and display past transactions for connected wallets  
+🔹 Show estimated gas fees before sending transactions  
+🔹 Display the wallet's token balances with the user's local fiat currency.  
+🔹 Display the tokens held by the connected wallet, rather than relying on a static list.  
+🔹 Improve feedback for failed transactions or connection issues.  
+🔹 Enhance the design and responsiveness for a more polished experience.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
