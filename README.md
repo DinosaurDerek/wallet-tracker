@@ -41,7 +41,7 @@ yarn dev
 
 The project is deployed on Vercel at:
 
-🔗 [Vercel URL](https://wallet-tracker-cle79tyfp-dereks-projects-1fc98dac.vercel.app)
+🔗 [Vercel URL](https://wallet-tracker-pink.vercel.app/)
 
 ## Future Improvements
 
