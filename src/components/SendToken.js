@@ -26,11 +26,11 @@ function SendTransactionForm() {
         setIsSuccessful(false);
 
         try {
-            if (selectedToken.address === '') {
-                // Send native ETH
+            if (selectedToken.address === undefined) {
+                // Send native token
                 await sendTransactionAsync({
                     to: recipient,
-                    value: parseUnits(amount, 18)
+                    value: parseUnits(amount, selectedToken.decimals)
                 });
                 setIsSuccessful(true);
             } else {
